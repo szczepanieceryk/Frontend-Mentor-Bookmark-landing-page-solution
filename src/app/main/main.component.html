@@ -1,0 +1,63 @@
+<div class="main-wrapper">
+  <section class="features">
+    <h3 class="title">
+      {{featuresTitle}}
+    </h3>
+    <span class="text">
+      {{featuresTxt}}
+    </span>
+    <li>
+      <a href="">
+        Simple Bookmarking
+      </a>
+    </li>
+    <li>
+      <a href="">
+        Speedy Searching
+      </a>
+    </li>
+    <li>
+      <a href="">
+        Easy Sharing
+      </a>
+    </li>
+  </section>
+  <section class="bookmark">
+    <img src="../../assets/images/illustration-features-tab-1.svg" alt="bookmark">
+    <div class="bookmark-content">
+      <h3 class="title">
+        {{bookmarkTitle}}
+      </h3>
+      <span class="text">
+        {{bookmarkTxt}}
+      </span>
+      <button class=" btn btn-more">
+        More info
+      </button>
+    </div>
+  </section>
+  <section class="extensions">
+    <h3 class="title">
+      {{extensionsTitle}}
+    </h3>
+    <span class="text">
+      {{extensionsTxt}}
+    </span>
+    <div *ngFor="let extension of extensionsContent" class="extensions-component">
+      <img src={{extension.img}} alt="browser logo">
+      <h3 class="title">
+        {{extension.title}}
+      </h3>
+      <small>
+        {{extension.small}}
+      </small>
+      <svg class="dots" xmlns="http://www.w3.org/2000/svg" width="280" height="4">
+        <path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd"
+          d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+      </svg>
+      <button class="btn">
+        {{extension.btnTxt}}
+      </button>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,38 @@
+.faq-wrapper{
+    padding: 2em;
+    text-align: center;
+}
+.faq-wrapper .more{
+    margin: 2em auto;
+    box-shadow: none;
+}
+.faq-card {
+    position: relative;
+    text-align: left;
+}
+.faq-card hr{
+    color: #ddd;
+}
+.faq-card .question{
+    padding: 1em 0;
+    display: inline-block;
+}
+.faq-card .answer{
+    padding: 2em 0;
+    line-height: 1.5;
+    color: var(--grayish-blue);
+    display: none;
+}
+.faq-card .arrow{
+    position: absolute;
+    top: 23px;
+    right: 5px;
+}
+
+/* active states */
+.faq-card .arrow.active {
+    transform: rotateX(180deg);
+}
+.faq-card .answer.active{
+    display: block;
+}

@@ -1,0 +1,34 @@
+.header-wrapper {
+    margin: 3em 1em;
+    text-align: center;
+}
+.header-wrapper img{
+    width: 100%;
+}
+.header-wrapper .header-content{
+    margin: 2em auto;
+}
+
+/* header btn's */
+.header-wrapper .header-content .btn:hover{
+    /* background-color: transparent; */
+    border: 1px solid var(--soft-blue);
+    color:var(--soft-blue);
+}
+.header-wrapper .header-content .btn-chrome{
+    background-color: var(--soft-blue);
+}
+.header-wrapper .header-content .btn-fire{
+    background-color: #fff;
+    color: #000;
+}
+
+/* hover states */
+.header-wrapper .header-content .btn-chrome:hover{
+    background-color: #fff;
+}
+.header-wrapper .header-content .btn-fire:hover{
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+}
