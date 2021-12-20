@@ -6,9 +6,15 @@
     <span class="title">
       {{newsTitle}}
     </span>
-    <form>
-      <input type="text">
-      <button class="btn submit">
+    <form [formGroup]="newsletterForm" (ngSubmit)="onFormSubmit()">
+      <input type="email" formControlName="email">
+      <div class="error" *ngIf="email && email.invalid && email.touched">
+        <small class="error-msg">
+          Whoops, make sure it's valid email
+        </small>
+      </div>
+
+      <button type="submit" class="btn submit">
         Contact us
       </button>
     </form>

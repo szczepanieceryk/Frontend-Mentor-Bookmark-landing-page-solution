@@ -33,6 +33,18 @@
     border: 2px solid var(--soft-red);
 }
 
+/* invalid input error message  */
+.newsletter .error{
+    margin: auto;
+    padding: 5px 10px;
+    display: block;
+    width: 80%;
+    font-size: 12px;
+    text-align: left;
+    background-color: var(--soft-red);
+    border-radius: 0 0 4px 4px;
+}
+
 /* footer nav section */
 .footer{
     background-color: var(--very-dark-blue);
