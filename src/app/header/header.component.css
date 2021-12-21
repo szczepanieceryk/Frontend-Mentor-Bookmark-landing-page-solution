@@ -7,12 +7,13 @@
 }
 .header-wrapper .header-content{
     margin: 2em auto;
+    max-width: 600px;
 }
 
 /* header btn's */
 .header-wrapper .header-content .btn:hover{
     /* background-color: transparent; */
-    border: 1px solid var(--soft-blue);
+    border: 2px solid var(--soft-blue);
     color:var(--soft-blue);
 }
 .header-wrapper .header-content .btn-chrome{
@@ -28,7 +29,34 @@
     background-color: #fff;
 }
 .header-wrapper .header-content .btn-fire:hover{
-    border: 1px solid #000;
+    border: 2px solid #000;
     background-color: transparent;
     color: #000;
+}
+
+@media screen and (min-width:1025px){
+    .header-wrapper {
+        margin: 3em auto;
+        padding: 0 2em;
+        max-width: 1600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "content image";
+    }
+    .header-wrapper img {
+        grid-area: image;
+    }
+    .header-wrapper .header-content{
+        inset: 0;
+        margin: auto 2em;
+        text-align: left;
+        grid-area: content;
+    }
+    .header-wrapper .header-content .title{
+        font-size:40px;
+    }
+    .header-wrapper .header-content .btn-chrome {
+        margin-left: 0;
+    }
 }

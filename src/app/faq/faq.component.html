@@ -5,7 +5,7 @@
   <span class="text">
     {{faqTxt}}
   </span>
-  <div *ngFor="let card of questionsAndAnswers" class="faq-card">
+  <div *ngFor="let card of questionsAndAnswers; let i = index" class="faq-card">
     <span class="question">
       {{card.question}}
     </span>

@@ -8,8 +8,13 @@
     background-color: var(--soft-blue);
     color: #fff;
 }
-.newsletter .title,.footer-wrapper .newsletter .submit{
+.newsletter .title,.newsletter .users,.newsletter .submit{
     display: block;
+}
+.newsletter .users{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .newsletter form {
     margin: 1em auto;
@@ -27,6 +32,9 @@
     background-color: var(--soft-red);
     transition: .3s;
 }
+/* .newsletter .submit .ng-invalid{
+    background-color: #ddd;
+} */
 .newsletter .submit:hover{
     background-color: #fff;
     color: var(--soft-red);
@@ -68,4 +76,60 @@
 }
 .footer svg:hover{
     fill: var(--soft-red)
+}
+
+/* attribiutions */
+.attribution { 
+    margin: 10px auto;
+    font-size: 11px; 
+}
+.attribution a { 
+        color: var(--soft-blue);
+     }
+@media screen and (min-width:1025px){
+    .newsletter{
+        padding: 4em;
+    }
+    .newsletter .users{
+        margin-bottom: 30px;
+    }
+    .newsletter .title{
+        font-size: 20px;
+    }
+    .newsletter .submit{
+        margin:10px;
+        display: inline-block;
+        width: 15%;
+    }
+    .newsletter input,.newsletter .error{
+        width: 30%;
+    }
+    
+    /* footer nav section */
+    .footer{
+        padding: 1em 5em;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-template-areas: 
+        "logo nav socials"
+        "attrib attrib attrib";
+    }
+    .footer .logo{
+        grid-area: logo;
+    }
+    .footer nav{
+        grid-area: nav;
+    }
+    .footer .socials{
+        grid-area: socials;
+    }
+    .footer .attribution{
+        grid-area: attrib;
+    }
+    .footer nav ul{
+        display: flex;
+    }
+    .footer nav ul li, .footer svg {
+        margin: 0 1em;
+    }
 }

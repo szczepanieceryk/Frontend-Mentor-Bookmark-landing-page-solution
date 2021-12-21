@@ -10,38 +10,59 @@
 /* features section */
 .main-wrapper .features{
     margin: 2em auto;
+    max-width: 800px;
 }
 .main-wrapper .features li {
     list-style: none;
+    border-bottom: 4px solid transparent;
 }
-.main-wrapper .features a {
+.main-wrapper .features button {
     display: block;
     padding: 1em;
     text-decoration: none;
     color: #000;
+    border-style: none;
     border-bottom: 1px solid #ddd;
     transition: .3s;
+    /* btn */
+    margin: auto;
+    background-color: transparent;
+    cursor: pointer;
 }
-.main-wrapper .features a:hover{
+.main-wrapper .features li.first{
     border-bottom: 4px solid red;
 }
 
 /* bookmark section */
+.main-wrapper .bookmark {
+    margin: auto;
+    max-width: 1600px;
+}
 .main-wrapper .bookmark .bookmark-content{
     padding: 3em 0;
+    max-width:600px;
 }
 .main-wrapper .bookmark .bookmark-content .btn-more{
+    margin: 0;
     display: none;
+    transition: .3s;
+}
+.main-wrapper .bookmark .bookmark-content .btn-more:hover{
+   border: 2px solid var(--soft-blue);
+   color: var(--soft-blue);
+   background-color: transparent;
 }
 
 /* extensions section  */
 .main-wrapper .extensions{
     margin: 2em auto 5em;
+    max-width: 1100px;
 }
 .main-wrapper .extensions .extensions-component{
     margin: 2em auto;
     padding: 1em;
-    width: 75%;
+    width: 90%;
+    max-width: 300px;
     box-shadow: 0px 2px 10px 0px rgb(206, 205, 205);
 }
 .main-wrapper .extensions .extensions-component img {
@@ -60,8 +81,73 @@
 }
 .main-wrapper .extensions .extensions-component .btn:hover{
     background-color: transparent;
-    border: 1px solid var(--soft-blue);
+    border: 2px solid var(--soft-blue);
     color:var(--soft-blue);
 } 
 
 
+@media screen and (min-width:1025px){
+    /* features section */
+    .main-wrapper .features button:hover{
+        color: var(--soft-red);
+    }
+    .main-wrapper{
+        padding: 0 2em;
+    }
+    .main-wrapper .features ul {
+        display: flex;
+        justify-content: center;
+    }
+ 
+    /* bookmark section */
+    .main-wrapper .bookmark {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        "image content";
+    }
+    .main-wrapper .bookmark img{
+        grid-area: image;
+    }
+    .main-wrapper .bookmark .bookmark-content{
+        inset: 0;
+        margin: auto;
+        padding: 0 3em;
+        text-align: left;
+        grid-area: content;
+    }
+    .main-wrapper .bookmark .bookmark-content .btn-more{
+        display: block;
+    }
+
+    /* extensions section */
+    .main-wrapper .extensions{
+        margin: 5em auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-wrapper .extensions .title{
+        flex-basis: 100%;
+    }
+    .extensions .extensions-component{
+        flex-basis: 30%;
+    } 
+}
+
+@media screen and (min-width:1201px){
+    /* .main-wrapper{
+        max-width: 1200px;
+        margin: 5em auto;
+    } */
+    /* extensions section */
+    .main-wrapper .extensions .text{
+        margin-bottom: 4em;
+    }
+    .extensions .extensions-component.first{
+        transform: translateY(-40px);
+    }
+    .extensions .extensions-component.last{
+        transform: translateY(40px);
+    }
+}

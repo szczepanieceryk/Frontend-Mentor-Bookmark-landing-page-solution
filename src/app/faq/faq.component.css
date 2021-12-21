@@ -5,6 +5,13 @@
 .faq-wrapper .more{
     margin: 2em auto;
     box-shadow: none;
+    transition: .3s;
+}
+
+.faq-wrapper .more:hover{
+    background-color: transparent;
+    color: var(--soft-blue);
+    border: 2px solid var(--soft-blue);
 }
 .faq-card {
     position: relative;
@@ -35,4 +42,11 @@
 }
 .faq-card .answer.active{
     display: block;
+}
+
+@media screen and (min-width:1025px){
+    .faq-wrapper{
+        margin: auto;
+        max-width: 600px;
+    }
 }

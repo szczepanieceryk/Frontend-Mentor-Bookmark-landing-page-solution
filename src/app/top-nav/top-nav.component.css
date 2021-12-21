@@ -1,54 +1,107 @@
 .top-nav-wrapper{
-    /* padding: 2em; */
-    margin: 1em;
-    position: relative;
-    /* background-color: var(--very-dark-blue); */
+    padding: 1em;
 }
-.top-nav-wrapper .hamburger-icon,.close-icon{
+.hamburger-icon,.close-icon{
     position: absolute;
-    top: 5px;
-    right: 0;
-    cursor: pointer;
+    top: 20px;
+    right: 20px;
 }
 .close-icon{
     display: none;
 }
-.top-nav-wrapper nav {
+nav {
     display: none;
-}
-.top-nav-wrapper nav ul {
     text-align: center;
 }
-.top-nav-wrapper nav ul li{
+nav ul li {
     list-style: none;
+    border-bottom: 1px solid rgba(221, 221, 221,.5);
 }
-.top-nav-wrapper nav ul li a{
-    margin: .5em;
+nav ul li:nth-child(4){
+    border-style:none;
+}
+nav ul li a{
+    margin: 1em;
     display: block;
     text-decoration: none;
-    /* border-bottom: 1px solid gray; */
-}
-.top-nav-wrapper .btn-login{
-    margin: .5em;
-    padding: 5px 40px;
-    width: 70%;
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #fff;
-    background-color: transparent;
     color: #fff;
+}
+.btn-login{
+    margin: 1em auto;
+    width: 90%;
+    background-color: transparent;
+    box-shadow: none;
+    border:2px solid #fff;
+}
+.socials{
+   margin-top: 10em;
+}
+.socials svg{
+    margin: 1em;
 }
 
-/* active states for navigation */
+/* active states */
+nav.active{
+    display: block;
+}
 .top-nav-wrapper.active{
-    background-color: var(--very-dark-blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mobile-nav-active);
 }
-.top-nav-wrapper nav.active ul li  a{
-    color: #fff;
-}
+
 .close-icon.active{
     display: block;
 }
 .hamburger-icon.active{
     display: none;
+}
+
+@media screen and (min-width:1025px){
+    .top-nav-wrapper{
+        padding: 2em 4em;
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: 
+        "logo nav";
+    }
+    .hamburger-icon,.socials{
+        display: none;
+    }
+    .logo{
+        grid-area: logo;
+    }
+    nav{
+        display: block;
+        grid-area: nav;
+    }
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav ul li{
+        border-style: none;
+    }
+    nav ul li a{
+        margin: 0 2em;
+        color: var(--very-dark-blue);
+        transition: .3s;
+    }
+    nav ul li a:hover{
+        color: var(--soft-red);
+    }
+    .btn-login{
+        margin: 0;
+        background-color: var(--soft-red);
+        transition: .3s;
+    }
+    .btn-login:hover{
+        background-color: transparent;
+        color: var(--soft-red);
+        border: 2px solid var(--soft-red);
+    }
 }

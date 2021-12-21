@@ -6,30 +6,25 @@
     <span class="text">
       {{featuresTxt}}
     </span>
-    <li>
-      <a href="">
-        Simple Bookmarking
-      </a>
-    </li>
-    <li>
-      <a href="">
-        Speedy Searching
-      </a>
-    </li>
-    <li>
-      <a href="">
-        Easy Sharing
-      </a>
-    </li>
+    <ul>
+      <li *ngFor="let link of featuresLinks; let first = first; let last = last" [ngClass]="{first:first,last:last}">
+        <button>
+          {{link}}
+        </button>
+        <!-- <a href="">
+          {{link}}
+        </a> -->
+      </li>
+    </ul>
   </section>
   <section class="bookmark">
-    <img src="../../assets/images/illustration-features-tab-1.svg" alt="bookmark">
+    <img src={{contentSlider[0].img}} alt="bookmark">
     <div class="bookmark-content">
       <h3 class="title">
-        {{bookmarkTitle}}
+        {{contentSlider[0].title}}
       </h3>
       <span class="text">
-        {{bookmarkTxt}}
+        {{contentSlider[0].text}}
       </span>
       <button class=" btn btn-more">
         More info
@@ -43,7 +38,8 @@
     <span class="text">
       {{extensionsTxt}}
     </span>
-    <div *ngFor="let extension of extensionsContent" class="extensions-component">
+    <div *ngFor="let extension of extensionsContent; let first = first; let last = last"
+      [ngClass]="{first:first,last:last}" class="extensions-component">
       <img src={{extension.img}} alt="browser logo">
       <h3 class="title">
         {{extension.title}}

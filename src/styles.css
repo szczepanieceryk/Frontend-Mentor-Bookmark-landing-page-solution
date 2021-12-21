@@ -8,6 +8,7 @@
     --soft-red: hsl(0, 94%, 66%);
     --grayish-blue: hsl(229, 8%, 60%);
     --very-dark-blue: hsl(229, 31%, 21%);
+    --mobile-nav-active: hsla(229, 31%, 21%, 0.9);
 }
 *{
     margin: 0;
@@ -21,9 +22,6 @@ body{
 
 /* global styles for span .text and button .btn */
 
-svg{
-    cursor: pointer;
-}
 .text{
     margin: 1em auto;
     line-height: 1.5em;
@@ -31,15 +29,23 @@ svg{
     color: var(--grayish-blue);
 }
 
+/* usupełnić globlany hover!!!! */
 .btn{
     margin: 0 10px;
     padding:12px 10px;
     border-radius: 5px;
     border-style: none;
     box-shadow: 0px 5px 5px 0px rgb(206, 205, 205);
+    border: 2px solid transparent;
     background-color: var(--soft-blue);
     color: #fff;
     cursor: pointer;
 }
 
+svg{
+    cursor: pointer;
+}
+img{
+    max-width: 500px;
+}
 /* global btn:hover */

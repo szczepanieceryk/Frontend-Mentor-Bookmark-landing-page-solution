@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 type Faq = {
   question:string;
-  answer:string
+  answer:string;
 }
 
 @Component({
