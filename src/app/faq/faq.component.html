@@ -9,7 +9,7 @@
     <span class="question">
       {{card.question}}
     </span>
-    <img [class.active]="id === card.idx" (click)="showAnswer(card.idx)" class="arrow active"
+    <img [class.active]="id === card.idx" (click)="showAnswer(card.idx)" class="arrow up-arrow"
       src="../../assets/images/icon-arrow.svg" alt="">
     <hr>
     <span *ngIf="id === card.idx" class="answer">

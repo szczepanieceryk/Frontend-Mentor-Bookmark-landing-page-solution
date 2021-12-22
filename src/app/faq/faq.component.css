@@ -29,17 +29,40 @@
     padding: 2em 0;
     line-height: 1.5;
     color: var(--grayish-blue);
-    /* display: none; */
-    /* max-height: 0;
-    overflow: hidden;
-    transition: max-height 1.4s ease; */
+    /* animation */
+    transition: 4s ease-in-out;
+   animation-name: slideDown;
+   animation-duration: 1s;
+}
+@keyframes slideDown {
+    0%{
+        transform: skewY(-100%);
+    }
+    50%{
+        transform: skewY(8%);
+    }
+    65%{
+        transform: skewY(-4%);
+    }
+    80%{
+        transform: skewY(4%);
+    }
+    95%{
+        transform: skewY(-2%);
+    }
+    100%{
+        transform: skewY(0%);
 
+    }
 }
 .faq-card .arrow{
     position: absolute;
     top: 23px;
     right: 5px;
     cursor: pointer;
+}
+.up-arrow{
+    transition: 0.2s ease-out;
 }
 
 /* active states */

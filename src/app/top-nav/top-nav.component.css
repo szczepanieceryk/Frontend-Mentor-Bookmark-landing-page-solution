@@ -82,6 +82,7 @@ nav.active{
     nav ul{
         display: flex;
         justify-content: flex-end;
+        align-items: center;
     }
     nav ul li{
         border-style: none;
@@ -89,6 +90,7 @@ nav.active{
     nav ul li a{
         margin: 0 2em;
         color: var(--very-dark-blue);
+
         transition: .3s;
     }
     nav ul li a:hover{
@@ -96,6 +98,8 @@ nav.active{
     }
     .btn-login{
         margin: 0;
+        width:120px;
+        height: 44px;
         background-color: var(--soft-red);
         transition: .3s;
     }
