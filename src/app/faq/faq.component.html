@@ -5,15 +5,14 @@
   <span class="text">
     {{faqTxt}}
   </span>
-  <div *ngFor="let card of questionsAndAnswers; let i = index" class="faq-card">
+  <div *ngFor="let card of questionsAndAnswers" class="faq-card">
     <span class="question">
       {{card.question}}
     </span>
-    <svg [class.active]="isActive === true" (click)="showAnswer()" class="arrow" xmlns="http://www.w3.org/2000/svg"
-      width="18" height="12">
-      <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" /></svg>
+    <img [class.active]="id === card.idx" (click)="showAnswer(card.idx)" class="arrow active"
+      src="../../assets/images/icon-arrow.svg" alt="">
     <hr>
-    <span [class.active]="isActive === true" class="answer">
+    <span *ngIf="id === card.idx" class="answer">
       {{card.answer}}
     </span>
   </div>

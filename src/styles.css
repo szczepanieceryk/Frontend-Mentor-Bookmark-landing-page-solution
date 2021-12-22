@@ -21,7 +21,6 @@ body{
 }
 
 /* global styles for span .text and button .btn */
-
 .text{
     margin: 1em auto;
     line-height: 1.5em;
@@ -41,11 +40,13 @@ body{
     color: #fff;
     cursor: pointer;
 }
+/* global btn:hover */
+/* .btn:hover{
 
+} */
 svg{
     cursor: pointer;
 }
 img{
     max-width: 500px;
 }
-/* global btn:hover */

@@ -71,11 +71,12 @@
 .footer nav ul li a:hover{
     color: var(--soft-red);
 }
-.footer svg{
+.footer img{
     margin: 1em;
+    cursor: pointer;
 }
-.footer svg:hover{
-    fill: var(--soft-red)
+.footer img:hover{
+    filter: invert(73%) sepia(75%) saturate(5100%) hue-rotate(326deg) brightness(100%) contrast(97%);
 }
 
 /* attribiutions */
@@ -129,7 +130,7 @@
     .footer nav ul{
         display: flex;
     }
-    .footer nav ul li, .footer svg {
+    .footer nav ul li, .footer img {
         margin: 0 1em;
     }
 }

@@ -25,23 +25,34 @@
     display: inline-block;
 }
 .faq-card .answer{
+    display: block;
     padding: 2em 0;
     line-height: 1.5;
     color: var(--grayish-blue);
-    display: none;
+    /* display: none; */
+    /* max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease; */
+
 }
 .faq-card .arrow{
     position: absolute;
     top: 23px;
     right: 5px;
+    cursor: pointer;
 }
 
 /* active states */
 .faq-card .arrow.active {
-    transform: rotateX(180deg);
+     animation-name: icon;
+    transform: rotate(180deg);
+    filter: invert(73%) sepia(75%) saturate(5100%) hue-rotate(326deg) brightness(100%) contrast(97%);
+    /* transition: 0.2 ease-out; */
 }
+
 .faq-card .answer.active{
     display: block;
+    /* max-height: 400px; */
 }
 
 @media screen and (min-width:1025px){
