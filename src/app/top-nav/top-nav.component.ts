@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
+  // active flag for menu
   isActive = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  // function for openeing mobile mneu
   activeMenu(){
     this.isActive = !this.isActive
   }
